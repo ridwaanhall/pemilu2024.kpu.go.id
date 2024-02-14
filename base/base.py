@@ -1,4 +1,5 @@
 import requests
+from datetime import datetime
 
 class DataFetcher:
     @staticmethod
@@ -25,7 +26,8 @@ class OptionHandler:
             url = self.urls[option]
             data = DataFetcher.fetch_data_from_url(url)
             if data:
-                print(f"Data fetched successfully from URL {option}!")
+                # print(f"Data fetched successfully from URL {option}!")
+                print(data)
             else:
                 print(f"Failed to fetch data from URL {option}.")
         elif option == "4":
@@ -34,20 +36,21 @@ class OptionHandler:
             print("Invalid option. Please choose 1, 2, 3, or 4.")
 
     def fetch_and_display_data(self):
-        url1 = "https://sirekap-obj-data.kpu.go.id/pemilu/ppwp.json"
-        url3 = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcw/ppwp.json"
+        url1 = self.urls["1"]
+        url3 = self.urls["3"]
 
         data1 = DataFetcher.fetch_data_from_url(url1)
         data3 = DataFetcher.fetch_data_from_url(url3)
 
         if data1 and data3:
-            print(data3["ts"])
-            print(f"Progress: {data3['progres']['progres']:>6,} of {data3['progres']['total']:>6,} TPS ({data3['chart']['persen']}%)")
+            last_update = datetime.strptime(data3["ts"], "%Y-%m-%d %H:%M:%S").strftime("%d %B %Y %H:%M:%S WIB")
+            print(f"\nlast update: {last_update}")
+            print(f"Progress   : {data3['progres']['progres']:>6,} of {data3['progres']['total']:>6,} TPS ({data3['chart']['persen']}% done)")
 
             total_votes = sum(data3['chart'].values())
             for key, value in data1.items():
                 percent = data3['chart'][key] / total_votes * 100
-                print(f"{value['nomor_urut']:01d}: {data3['chart'][key]:>10,} - {percent:.2f}% of total")
+                print(f"{value['nomor_urut']:01d}: {data3['chart'][key]:>10,} - {percent:.2f}%")
         
         else:
             print("Failed to fetch data from one of the URLs.")
