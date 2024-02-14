@@ -31,9 +31,11 @@ class OptionHandler:
             else:
                 print(f"Failed to fetch data from URL {option}.")
         elif option == "4":
-            self.total_statistics()
-        elif option == "5":
             self.names()
+        elif option == "5":
+            self.region()
+        elif option == "7":
+            self.total_statistics()
         else:
             print("Invalid option. Please choose 1, 2, 3, or 4.")
 
@@ -50,7 +52,8 @@ class OptionHandler:
             total_progress = data3['progres']['total']
             percent        = data3['chart']['persen']
 
-            print(f"\nlast update: {last_update}")
+            print("\nreal count - KPU")
+            print(f"last update: {last_update}")
             print(f"Progress   : {progress:>6,} of {total_progress:>6,} TPS ({percent}% done)")
 
             total_votes = sum(data3['chart'][key] for key in data3['chart'] if key != 'persen')
@@ -65,11 +68,21 @@ class OptionHandler:
         data = DataFetcher.get_data(self.urls["1"])
         if data:
             # print numor_urut and nama
+            print("\nNames of presidential candidate and vice presidential candidate:")
             for key, value in data.items():
                 print(f"{value['nomor_urut']}: {value['nama']}")
         else:
             print("Failed to fetch data from URL 1.")
 
+    def region(self):
+        data = DataFetcher.get_data(self.urls["2"])
+        if data:
+            print("\nRegion:")
+            for region in data:
+                print(f"{region['kode']}: {region['nama']}")
+        else:
+            print("Failed to fetch data from URL 2.")
+                
 class FormattedDate:
     def __init__(self, date_string):
         self.date_string = date_string
