@@ -3,7 +3,7 @@ from datetime import datetime
 
 class DataFetcher:
     @staticmethod
-    def fetch_data_from_url(url):
+    def get_data(url):
         try:
             response = requests.get(url)
             response.raise_for_status()
@@ -24,33 +24,46 @@ class OptionHandler:
     def perform_option(self, option):
         if option in self.urls:
             url = self.urls[option]
-            data = DataFetcher.fetch_data_from_url(url)
+            data = DataFetcher.get_data(url)
             if data:
                 # print(f"Data fetched successfully from URL {option}!")
                 print(data)
             else:
                 print(f"Failed to fetch data from URL {option}.")
         elif option == "4":
-            self.fetch_and_display_data()
+            self.total_statistics()
         else:
             print("Invalid option. Please choose 1, 2, 3, or 4.")
 
-    def fetch_and_display_data(self):
-        url1 = self.urls["1"]
-        url3 = self.urls["3"]
+    def total_statistics(self):
+        # url1 = self.urls["1"]
+        # url3 = self.urls["3"]
 
-        data1 = DataFetcher.fetch_data_from_url(url1)
-        data3 = DataFetcher.fetch_data_from_url(url3)
+        data1 = DataFetcher.get_data(self.urls["1"])
+        data3 = DataFetcher.get_data(self.urls["3"])
 
         if data1 and data3:
-            last_update = datetime.strptime(data3["ts"], "%Y-%m-%d %H:%M:%S").strftime("%d %B %Y %H:%M:%S WIB")
-            print(f"\nlast update: {last_update}")
-            print(f"Progress   : {data3['progres']['progres']:>6,} of {data3['progres']['total']:>6,} TPS ({data3['chart']['persen']}% done)")
+            last_update    = FormattedDate(data3["ts"]).get_formatted_date()
+            progress       = data3['progres']['progres']
+            total_progress = data3['progres']['total']
+            percent        = data3['chart']['persen']
 
-            total_votes = sum(data3['chart'].values())
+            print(f"\nlast update: {last_update}")
+            print(f"Progress   : {progress:>6,} of {total_progress:>6,} TPS ({percent}% done)")
+
+            total_votes = sum(data3['chart'][key] for key in data3['chart'] if key != 'persen')
             for key, value in data1.items():
                 percent = data3['chart'][key] / total_votes * 100
                 print(f"{value['nomor_urut']:01d}: {data3['chart'][key]:>10,} - {percent:.2f}%")
         
         else:
             print("Failed to fetch data from one of the URLs.")
+
+class FormattedDate:
+    def __init__(self, date_string):
+        self.date_string = date_string
+
+    def get_formatted_date(self):
+        date_object = datetime.strptime(self.date_string, "%Y-%m-%d %H:%M:%S")
+        formatted_date = date_object.strftime("%d %B %Y %H:%M:%S WIB")
+        return formatted_date
