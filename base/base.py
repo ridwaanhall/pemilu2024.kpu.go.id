@@ -32,6 +32,8 @@ class OptionHandler:
                 print(f"Failed to fetch data from URL {option}.")
         elif option == "4":
             self.total_statistics()
+        elif option == "5":
+            self.names()
         else:
             print("Invalid option. Please choose 1, 2, 3, or 4.")
 
@@ -58,6 +60,15 @@ class OptionHandler:
         
         else:
             print("Failed to fetch data from one of the URLs.")
+
+    def names(self):
+        data = DataFetcher.get_data(self.urls["1"])
+        if data:
+            # print numor_urut and nama
+            for key, value in data.items():
+                print(f"{value['nomor_urut']}: {value['nama']}")
+        else:
+            print("Failed to fetch data from URL 1.")
 
 class FormattedDate:
     def __init__(self, date_string):
