@@ -42,12 +42,12 @@ class OptionHandler:
 
         if data1 and data3:
             print(data3["ts"])
-            print(f"Progress: {data3['progres']['progres']} of {data3['progres']['total']} TPS ({data3['chart']['persen']}%)")
+            print(f"Progress: {data3['progres']['progres']:>6,} of {data3['progres']['total']:>6,} TPS ({data3['chart']['persen']}%)")
 
             total_votes = sum(data3['chart'].values())
             for key, value in data1.items():
                 percent = data3['chart'][key] / total_votes * 100
-                print(f"{value['nomor_urut']:02d}: {data3['chart'][key]:>10,} - {percent:.2f}% of total")
+                print(f"{value['nomor_urut']:01d}: {data3['chart'][key]:>10,} - {percent:.2f}% of total")
         
         else:
             print("Failed to fetch data from one of the URLs.")
