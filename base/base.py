@@ -59,7 +59,7 @@ class OptionHandler:
             total_votes = sum(data3['chart'][key] for key in data3['chart'] if key != 'persen')
             for key, value in data1.items():
                 percent = data3['chart'][key] / total_votes * 100
-                print(f"{value['nomor_urut']:01d}: {data3['chart'][key]:>10,} - {percent:.2f}%")
+                print(f"{value['nomor_urut']:01d}: {data3['chart'][key]:>10,} - {percent:.2f}% ({value['nama']})")
         
         else:
             print("Failed to fetch data from one of the URLs.")
