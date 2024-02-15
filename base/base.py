@@ -39,7 +39,7 @@ class OptionHandler:
         elif option == "7":
             self.total_statistics()
         else:
-            print("Invalid option. Please choose 1, 2, 3, or 4.")
+            print("Invalid option. Please choose 1, 2, 3, 4, 5, 6, or 7.")
 
     def total_statistics(self):
         # url1 = self.urls["1"]
@@ -54,7 +54,7 @@ class OptionHandler:
             total_progress = stat_reg['progres']['total']
             percent        = stat_reg['chart']['persen']
 
-            print("\nreal count - KPU")
+            print("\nREAL COUNT - KPU")
             print(f"last update: {last_update}")
             print(f"Progress   : {progress:>6,} of {total_progress:>6,} TPS ({percent}% done)")
 
@@ -96,9 +96,10 @@ class OptionHandler:
                     print(f"progress: {value['persen']}%")
                     for k, v in value.items():
                         if k != 'status_progress' and k != 'persen' and k !='psu':
+                            ppwp_value = ppwp_name.get(k, {})
                             total = value["100025"] + value["100026"] + value["100027"]
                             percentage = v / total * 100
-                            print(f"{k}: {v:>10,} - {percentage:.2f}%")
+                            print(f"{ppwp_value.get('nomor_urut', '')}: {v:>10,} - {percentage:.2f}% [{ppwp_value.get('nama', '')}]")
 
                 
 class FormattedDate:
