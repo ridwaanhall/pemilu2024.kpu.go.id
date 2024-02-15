@@ -100,8 +100,11 @@ class OptionHandler:
                             total = value["100025"] + value["100026"] + value["100027"]
                             percentage = v / total * 100
                             print(f"{ppwp_value.get('nomor_urut', '')}: {v:>10,} - {percentage:.2f}% [{ppwp_value.get('nama', '')}]")
+                        else:
+                            print(f"{k}: {v}")
+                else:
+                    print(f"{key} not found in name_reg")
 
-                
 class FormattedDate:
     def __init__(self, date_string):
         self.date_string = date_string
