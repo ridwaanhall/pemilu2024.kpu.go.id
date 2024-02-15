@@ -101,7 +101,8 @@ class OptionHandler:
                             percentage = v / total * 100
                             print(f"{ppwp_value.get('nomor_urut', '')}: {v:>10,} - {percentage:.2f}% [{ppwp_value.get('nama', '')}]")
                         else:
-                            print(f"{k}: {v}")
+                            # print(f"{k}: {v}")
+                            continue
                 else:
                     continue
 
