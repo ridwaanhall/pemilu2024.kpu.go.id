@@ -34,6 +34,8 @@ class OptionHandler:
             self.names()
         elif option == "5":
             self.region()
+        elif option == "6":
+            self.regional_statistics()
         elif option == "7":
             self.total_statistics()
         else:
@@ -43,23 +45,23 @@ class OptionHandler:
         # url1 = self.urls["1"]
         # url3 = self.urls["3"]
 
-        data1 = DataFetcher.get_data(self.urls["1"])
-        data3 = DataFetcher.get_data(self.urls["3"])
+        name_ppwp = DataFetcher.get_data(self.urls["1"])
+        reg_stat = DataFetcher.get_data(self.urls["3"])
 
-        if data1 and data3:
-            last_update    = FormattedDate(data3["ts"]).get_formatted_date()
-            progress       = data3['progres']['progres']
-            total_progress = data3['progres']['total']
-            percent        = data3['chart']['persen']
+        if name_ppwp and reg_stat:
+            last_update    = FormattedDate(reg_stat["ts"]).get_formatted_date()
+            progress       = reg_stat['progres']['progres']
+            total_progress = reg_stat['progres']['total']
+            percent        = reg_stat['chart']['persen']
 
             print("\nreal count - KPU")
             print(f"last update: {last_update}")
             print(f"Progress   : {progress:>6,} of {total_progress:>6,} TPS ({percent}% done)")
 
-            total_votes = sum(data3['chart'][key] for key in data3['chart'] if key != 'persen')
-            for key, value in data1.items():
-                percent = data3['chart'][key] / total_votes * 100
-                print(f"{value['nomor_urut']:01d}: {data3['chart'][key]:>10,} - {percent:.2f}% ({value['nama']})")
+            total_votes = sum(reg_stat['chart'][key] for key in reg_stat['chart'] if key != 'persen')
+            for key, value in name_ppwp.items():
+                percent = reg_stat['chart'][key] / total_votes * 100
+                print(f"{value['nomor_urut']:01d}: {reg_stat['chart'][key]:>10,} - {percent:.2f}% ({value['nama']})")
         
         else:
             print("Failed to fetch data from one of the URLs.")
@@ -82,6 +84,20 @@ class OptionHandler:
                 print(f"{region['kode']}: {region['nama']}")
         else:
             print("Failed to fetch data from URL 2.")
+
+    def regional_statistics(self):
+        reg_name = DataFetcher.get_data(self.urls["2"])
+        reg_stat = DataFetcher.get_data(self.urls["3"])
+
+        for key, value in reg_stat['table'].items():
+            for reg in reg_name:
+                if reg['kode'] == key:
+                    print(f"\n{key}. {reg['nama']} - level:{reg['tingkat']}")
+                    print(f"progress: {value['persen']}%")
+                    for k, v in value.items():
+                        if k != 'status_progress' and k != 'persen' and k !='psu':
+                            print(f"{k}: {v:>10,}")
+
                 
 class FormattedDate:
     def __init__(self, date_string):
