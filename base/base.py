@@ -103,7 +103,7 @@ class OptionHandler:
                         else:
                             print(f"{k}: {v}")
                 else:
-                    print(f"{key} not found in name_reg")
+                    continue
 
 class FormattedDate:
     def __init__(self, date_string):
