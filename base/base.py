@@ -62,7 +62,6 @@ class OptionHandler:
             for key, value in ppwp_name.items():
                 percent = stat_reg['chart'][key] / total_votes * 100
                 print(f"{value['nomor_urut']:01d}: {stat_reg['chart'][key]:>10,} - {percent:.2f}% ({value['nama']})")
-        
         else:
             print("Failed to fetch data from one of the URLs.")
 
@@ -96,7 +95,7 @@ class OptionHandler:
                     print(f"\n{key}. {name['nama']} - lv:{name['tingkat']}")
                     print(f"progress: {value['persen']}%")
                     for k, v in value.items():
-                        if k != 'status_progress' and k != 'persen' and k !='psu' and k == name_reg[key]:
+                        if k != 'status_progress' and k != 'persen' and k !='psu':
                             total = value["100025"] + value["100026"] + value["100027"]
                             percentage = v / total * 100
                             print(f"{k}: {v:>10,} - {percentage:.2f}%")
