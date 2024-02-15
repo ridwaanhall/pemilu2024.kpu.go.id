@@ -98,8 +98,8 @@ class OptionHandler:
                     for k, v in value.items():
                         if k != 'status_progress' and k != 'persen' and k !='psu' and k == name_reg[key]:
                             total = value["100025"] + value["100026"] + value["100027"]
-                            percentase = v / total * 100
-                            print(f"{k}: {v:>10,} - {percentase:.2f}%")
+                            percentage = v / total * 100
+                            print(f"{k}: {v:>10,} - {percentage:.2f}%")
 
                 
 class FormattedDate:
