@@ -14,7 +14,7 @@ if __name__ == "__main__":
     while True:
         clear_screen()
         print("+========================================+")
-        print("|  Welcome to pemilu 2024! (real count)  |")
+        print("|  WELCOME TO PEMILU 2024! (REAL COUNT)  |")
         print("+========================================+")
         print("| Choose an option:                      |")
         print("| 1. Fetch data from URL 1 - json        |")
@@ -23,15 +23,19 @@ if __name__ == "__main__":
         print("+----------------------------------------+")
         print("| 4. names of capres and cawapres        |")
         print("| 5. region                              |")
-        print("| 6. regional statistics                 |")
         print("+----------------------------------------+")
+        print("| 6. regional statistics                 |")
         print("| 7. total statistics                    |")
-        print("| 8. Exit                                |")
+        print("+----------------------------------------+")
+        print("| search detail option:                  |")
+        print("| 8. search detail                       |")
+        print("+----------------------------------------+")
+        print("| 0. Exit                                |")
         print("+========================================+")
 
         option = input("Enter your choice: ")
 
-        if option == '8':
+        if option == '0':
             print("Exiting...")
             break
 
