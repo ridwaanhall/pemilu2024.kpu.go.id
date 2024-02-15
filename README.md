@@ -1,4 +1,4 @@
-# this data from : https://pemilu2024.kpu.go.id/
+# this data from [kpu](https://pemilu2024.kpu.go.id/)
 
 ## how to use?
 
