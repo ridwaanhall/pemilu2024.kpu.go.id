@@ -45,23 +45,23 @@ class OptionHandler:
         # url1 = self.urls["1"]
         # url3 = self.urls["3"]
 
-        name_ppwp = DataFetcher.get_data(self.urls["1"])
-        reg_stat = DataFetcher.get_data(self.urls["3"])
+        ppwp_name = DataFetcher.get_data(self.urls["1"])
+        stat_reg = DataFetcher.get_data(self.urls["3"])
 
-        if name_ppwp and reg_stat:
-            last_update    = FormattedDate(reg_stat["ts"]).get_formatted_date()
-            progress       = reg_stat['progres']['progres']
-            total_progress = reg_stat['progres']['total']
-            percent        = reg_stat['chart']['persen']
+        if ppwp_name and stat_reg:
+            last_update    = FormattedDate(stat_reg["ts"]).get_formatted_date()
+            progress       = stat_reg['progres']['progres']
+            total_progress = stat_reg['progres']['total']
+            percent        = stat_reg['chart']['persen']
 
             print("\nreal count - KPU")
             print(f"last update: {last_update}")
             print(f"Progress   : {progress:>6,} of {total_progress:>6,} TPS ({percent}% done)")
 
-            total_votes = sum(reg_stat['chart'][key] for key in reg_stat['chart'] if key != 'persen')
-            for key, value in name_ppwp.items():
-                percent = reg_stat['chart'][key] / total_votes * 100
-                print(f"{value['nomor_urut']:01d}: {reg_stat['chart'][key]:>10,} - {percent:.2f}% ({value['nama']})")
+            total_votes = sum(stat_reg['chart'][key] for key in stat_reg['chart'] if key != 'persen')
+            for key, value in ppwp_name.items():
+                percent = stat_reg['chart'][key] / total_votes * 100
+                print(f"{value['nomor_urut']:01d}: {stat_reg['chart'][key]:>10,} - {percent:.2f}% ({value['nama']})")
         
         else:
             print("Failed to fetch data from one of the URLs.")
@@ -86,17 +86,20 @@ class OptionHandler:
             print("Failed to fetch data from URL 2.")
 
     def regional_statistics(self):
-        reg_name = DataFetcher.get_data(self.urls["2"])
-        reg_stat = DataFetcher.get_data(self.urls["3"])
+        ppwp_name = DataFetcher.get_data(self.urls["1"])
+        name_reg  = DataFetcher.get_data(self.urls["2"])
+        stat_reg  = DataFetcher.get_data(self.urls["3"])
 
-        for key, value in reg_stat['table'].items():
-            for reg in reg_name:
-                if reg['kode'] == key:
-                    print(f"\n{key}. {reg['nama']} - level:{reg['tingkat']}")
+        for key, value in stat_reg['table'].items():
+            for name in name_reg:
+                if name['kode'] == key:
+                    print(f"\n{key}. {name['nama']} - lv:{name['tingkat']}")
                     print(f"progress: {value['persen']}%")
                     for k, v in value.items():
-                        if k != 'status_progress' and k != 'persen' and k !='psu':
-                            print(f"{k}: {v:>10,}")
+                        if k != 'status_progress' and k != 'persen' and k !='psu' and k == name_reg[key]:
+                            total = value["100025"] + value["100026"] + value["100027"]
+                            percentase = v / total * 100
+                            print(f"{k}: {v:>10,} - {percentase:.2f}%")
 
                 
 class FormattedDate:
