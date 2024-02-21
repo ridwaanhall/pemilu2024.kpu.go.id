@@ -22,26 +22,6 @@ Progress   : 610,344 of 823,236 TPS (74.14% done)
 
 1023
 
-<div style="display: flex; justify-content: space-between;">
-
-<div style="width: 48%;">
-
-## Left Column
-
-Put your left column content here.
-
-</div>
-
-<div style="width: 48%;">
-
-## Right Column
-
-Put your right column content here.
-
-</div>
-
-</div>
-
 ## keyword
 
 - pemilu
@@ -57,4 +37,3 @@ Put your right column content here.
 - GIBRAN RAKABUMING RAKA
 - H. GANJAR PRANOWO, S.H., M.I.P.
 - Prof. Dr. H. M. MAHFUD MD
-
