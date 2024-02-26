@@ -2,12 +2,12 @@
 
 ```txt
 REAL COUNT - Pemilu 2024 KPU
-last update: 22 February 2024 23:00:15 WIB
-Progress   : 619,579 of 823,236 TPS (75.26% done)
+last update: 26 February 2024 21:00:15 WIB
+Progress   : 636,652 of 823,236 TPS (77.34% done)
 
-1: 26,581,455 - 24.06% (H. ANIES RASYID BASWEDAN, Ph.D. - Dr. (H.C.) H. A. MUHAIMIN ISKANDAR)
-2: 65,049,492 - 58.89% (H. PRABOWO SUBIANTO - GIBRAN RAKABUMING RAKA)
-3: 18,833,011 - 17.05% (H. GANJAR PRANOWO, S.H., M.I.P. - Prof. Dr. H. M. MAHFUD MD)
+1: 31,146,713 - 24.45% (H. ANIES RASYID BASWEDAN, Ph.D. - Dr. (H.C.) H. A. MUHAIMIN ISKANDAR)
+2: 74,949,497 - 58.84% (H. PRABOWO SUBIANTO - GIBRAN RAKABUMING RAKA)
+3: 21,275,318 - 16.70% (H. GANJAR PRANOWO, S.H., M.I.P. - Prof. Dr. H. M. MAHFUD MD)
 ```
 
 ## how to use?
@@ -20,7 +20,7 @@ Progress   : 619,579 of 823,236 TPS (75.26% done)
 
 ## profile visit
 
-1023
+1042
 
 ## keyword
 
