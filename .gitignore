@@ -1,3 +1,4 @@
 __pycache__/
-secrets/
+secrets/*.py
 real_count_pemilu2024/
+secrets/
