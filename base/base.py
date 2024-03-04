@@ -14,11 +14,12 @@ class DataFetcher:
             return None
 
 class OptionHandler:
+    base_url = 'https://sirekap-obj-data.kpu.go.id'
     def __init__(self):
         self.urls = {
-            "1": "https://sirekap-obj-data.kpu.go.id/pemilu/ppwp.json",
-            "2": "https://sirekap-obj-data.kpu.go.id/wilayah/pemilu/ppwp/0.json",
-            "3": "https://sirekap-obj-data.kpu.go.id/pemilu/hhcw/ppwp.json"
+            "1": f"{self.base_url}/pemilu/ppwp.json",
+            "2": f"{self.base_url}/wilayah/pemilu/ppwp/0.json",
+            "3": f"{self.base_url}/pemilu/hhcw/ppwp.json"
         }
 
     def perform_option(self, option):
