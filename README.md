@@ -5,7 +5,7 @@ click [here](https://ridwaanhall.github.io/pemilu2024.kpu.go.id/) to see percent
 ```txt
                                      REAL COUNT - Pemilu 2024 KPU
 last update: 07 March 2024 00:00:16 WIB
-Progress   : 643,090 of 823,378 TPS (78.1039% done)
+Progress: 643,090 of 823,378 TPS (78.1039% done)
 
 1: 31,374,817 - 24.4909% (H. ANIES RASYID BASWEDAN, Ph.D. - Dr. (H.C.) H. A. MUHAIMIN ISKANDAR)
 2: 75,359,057 - 58.8245% (H. PRABOWO SUBIANTO - GIBRAN RAKABUMING RAKA)
