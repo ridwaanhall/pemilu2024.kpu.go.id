@@ -1,6 +1,10 @@
 import requests
 from datetime import datetime
 
+'''
+type in google: ridwaanhall
+'''
+
 class DataFetcher:
     @staticmethod
     def get_data(url):
