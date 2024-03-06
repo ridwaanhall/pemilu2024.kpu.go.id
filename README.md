@@ -2,12 +2,12 @@
 
 ```txt
 REAL COUNT - Pemilu 2024 KPU
-last update: 06 March 2024 15:00:15 WIB
-Progress   : 643,051 of 823,236 TPS (78.11% done)
+last update: 06 March 2024 16:00:15 WIB
+Progress   : 643,061 of 823,236 TPS (78.11% done)
 
-1: 31,375,814 - 24.49% (H. ANIES RASYID BASWEDAN, Ph.D. - Dr. (H.C.) H. A. MUHAIMIN ISKANDAR)
-2: 75,360,584 - 58.82% (H. PRABOWO SUBIANTO - GIBRAN RAKABUMING RAKA)
-3: 21,374,455 - 16.68% (H. GANJAR PRANOWO, S.H., M.I.P. - Prof. Dr. H. M. MAHFUD MD)
+1: 31,375,559 - 24.49% (H. ANIES RASYID BASWEDAN, Ph.D. - Dr. (H.C.) H. A. MUHAIMIN ISKANDAR)
+2: 75,359,997 - 58.82% (H. PRABOWO SUBIANTO - GIBRAN RAKABUMING RAKA)
+3: 21,374,418 - 16.68% (H. GANJAR PRANOWO, S.H., M.I.P. - Prof. Dr. H. M. MAHFUD MD)
 ```
 
 ## how to use?
@@ -19,8 +19,6 @@ Progress   : 643,051 of 823,236 TPS (78.11% done)
 ## `secrets` and `real_count_pemilu2024` folder will go public after real count is 100%
 
 ## profile visit
-
-1042
 
 ## keyword
 
