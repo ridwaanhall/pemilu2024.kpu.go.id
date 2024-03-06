@@ -1,7 +1,7 @@
 # this data from [KPU](https://pemilu2024.kpu.go.id/)
 
 ```txt
-REAL COUNT - Pemilu 2024 KPU
+                 REAL COUNT - Pemilu 2024 KPU
 last update: 06 March 2024 17:00:15 WIB
 Progress   : 643,067 of 823,236 TPS (78.1145% done)
 
@@ -10,15 +10,20 @@ Progress   : 643,067 of 823,236 TPS (78.1145% done)
 3: 21,374,396 - 16.6844% (H. GANJAR PRANOWO, S.H., M.I.P. - Prof. Dr. H. M. MAHFUD MD)
 ```
 
-## how to use?
-
-1. clone this repo.
-2. run file `run.py`.
-3. choose number.
-
 ## `secrets` and `real_count_pemilu2024` folder will go public after real count is 100%
 
-## profile visit
+## how to use?
+
+### 1. search in google: ridwaanhall
+
+### 2. clone this repo
+
+```bash
+git clone https://github.com/ridwaanhall/pemilu2024.kpu.go.id.git
+cd pemilu2024.kpu.go.id
+```
+
+### 3. run file `run.py`
 
 ## keyword
 
