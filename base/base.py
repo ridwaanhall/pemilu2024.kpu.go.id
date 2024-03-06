@@ -1,5 +1,6 @@
 import requests
 from datetime import datetime
+from base.config import Config
 
 '''
 type in google: ridwaanhall
@@ -18,12 +19,11 @@ class DataFetcher:
             return None
 
 class OptionHandler:
-    base_url = 'https://sirekap-obj-data.kpu.go.id'
     def __init__(self):
         self.urls = {
-            "1": f"{self.base_url}/pemilu/ppwp.json",
-            "2": f"{self.base_url}/wilayah/pemilu/ppwp/0.json",
-            "3": f"{self.base_url}/pemilu/hhcw/ppwp.json"
+            "1": f"{Config.base_url}/pemilu/ppwp.json",
+            "2": f"{Config.base_url}/wilayah/pemilu/ppwp/0.json",
+            "3": f"{Config.base_url}/pemilu/hhcw/ppwp.json"
         }
 
     def perform_option(self, option):
