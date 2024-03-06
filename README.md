@@ -1,7 +1,7 @@
 # this data from [KPU](https://pemilu2024.kpu.go.id/)
 
 ```txt
-                 REAL COUNT - Pemilu 2024 KPU
+                                  REAL COUNT - Pemilu 2024 KPU
 last update: 06 March 2024 18:00:15 WIB
 Progress   : 643,067 of 823,378 TPS (78.1011% done)
 
