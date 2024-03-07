@@ -1,6 +1,10 @@
 import requests
 from fake_useragent import UserAgent
 
+'''
+this code is for testing. 403 - Forbidden fixed.
+'''
+
 url = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcw/ppwp.json"
 
 # Create a UserAgent object
