@@ -33,6 +33,8 @@ if __name__ == "__main__":
         print("| search detail option:                  |")
         print("| 8. search detail                       |")
         print("+----------------------------------------+")
+        print("| 9. LIST OF DISPUTES                    |")
+        print("+----------------------------------------+")
         print("| 0. Exit                                |")
         print("+========================================+")
 
