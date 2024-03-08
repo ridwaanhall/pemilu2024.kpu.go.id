@@ -29,16 +29,14 @@ class DataFetcher:
             response = requests.get(self.url, headers=self.headers)
             response.raise_for_status()  # Raise an exception for bad status codes (4xx or 5xx)
 
-            json_data = response.json()  # Convert response to JSON format
-            return json_data
+            print("Status Code:", response.status_code)
+            print("Status Text:", response.reason)
+            # print("Response Body:", response.text)
 
         except requests.exceptions.RequestException as e:
             print("Error fetching data:", e)
-            return None
 
 if __name__ == "__main__":
-    url = "https://sirekap-obj-data.kpu.go.id/wilayah/pemilu/ppwp/99.json"
+    url = "https://sirekap-obj-data.kpu.go.id/wilayah/pemilu/ppwp/0.json"
     data_fetcher = DataFetcher(url)
-    json_data = data_fetcher.fetch_data()
-    if json_data:
-        print(json_data)
+    data_fetcher.fetch_data()
