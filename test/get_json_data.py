@@ -38,5 +38,6 @@ class DataFetcher:
 
 if __name__ == "__main__":
     url = "https://sirekap-obj-data.kpu.go.id/wilayah/pemilu/ppwp/0.json"
+    # url =  input("Enter URL: ")
     data_fetcher = DataFetcher(url)
     data_fetcher.fetch_data()
