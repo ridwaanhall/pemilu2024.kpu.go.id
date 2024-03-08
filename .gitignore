@@ -1,7 +1,6 @@
 __pycache__/
 secrets/*.py
 real_count_pemilu2024/
-secrets/data/pemilu/hhcw/ppwp/15
 secrets/data/pemilu/hhcw/ppwp/16
 secrets/data/pemilu/hhcw/ppwp/*.json
 secrets/data/wilayah/pemilu/ppwp/*.json
