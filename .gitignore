@@ -3,7 +3,6 @@ secrets/*.py
 real_count_pemilu2024/
 secrets/data/pemilu
 secrets/data/wilayah/pemilu/ppwp/*.json
-secrets/data/wilayah/pemilu/ppwp/52
 secrets/data/wilayah/pemilu/ppwp/53
 secrets/data/wilayah/pemilu/ppwp/91
 secrets/data/wilayah/pemilu/ppwp/92
