@@ -4,12 +4,12 @@ click [here](https://ridwaanhall.github.io/pemilu2024.kpu.go.id/) to see percent
 
 ```txt
                                      REAL COUNT - Pemilu 2024 KPU
-last update: 08 March 2024 17:00:15 WIB
-Progress: 643,231 of 823,378 TPS (78.1210% done)
+last update: 11 March 2024 09:00:15 WIB
+Progress: 643,328 of 823,378 TPS (78.1328% done)
 
-1: 31,373,211 - 24.4911% (H. ANIES RASYID BASWEDAN, Ph.D. - Dr. (H.C.) H. A. MUHAIMIN ISKANDAR)
-2: 75,354,223 - 58.8244% (H. PRABOWO SUBIANTO - GIBRAN RAKABUMING RAKA)
-3: 21,372,942 - 16.6845% (H. GANJAR PRANOWO, S.H., M.I.P. - Prof. Dr. H. M. MAHFUD MD)
+1: 31,387,112 - 24.4962% (H. ANIES RASYID BASWEDAN, Ph.D. - Dr. (H.C.) H. A. MUHAIMIN ISKANDAR)
+2: 75,367,310 - 58.8208% (H. PRABOWO SUBIANTO - GIBRAN RAKABUMING RAKA)
+3: 21,375,903 - 16.6829% (H. GANJAR PRANOWO, S.H., M.I.P. - Prof. Dr. H. M. MAHFUD MD)
 ```
 
 ## `secrets` and `real_count_pemilu2024` folder will publish at March 20, 2024
