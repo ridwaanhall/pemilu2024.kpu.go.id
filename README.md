@@ -8,17 +8,17 @@ click [here](https://ridwaanhall.github.io/pemilu2024.kpu.go.id/) to see percent
 
 ## how to check real count?
 
-### 1. search in google: ridwaanhall
+1. search in google: ridwaanhall
 
-### 2. clone this repo
+2. clone this repo
 
 ```bash
 git clone https://github.com/ridwaanhall/pemilu2024.kpu.go.id.git
 ```
 
-### 3. run file `run.py`
+3. run file `run.py`
 
-### 4. select the number of option
+4. select the number of option
 
 ## contact me
 
