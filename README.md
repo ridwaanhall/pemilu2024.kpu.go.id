@@ -1,10 +1,10 @@
 # this data from [KPU](https://pemilu2024.kpu.go.id/)
 
-click [here](https://ridwaanhall.github.io/pemilu2024.kpu.go.id/) to see percentage of real count
+## click [https://pemilu2024.kpu.go.id/](https://ridwaanhall.github.io/pemilu2024.kpu.go.id/) to see percentage of real count
+
+This website has been created by Ridwan Halim (ridwaanhall) to provide information regarding the vote results for Presidential and Vice-Presidential Candidates, as The General Election Commissions (KPU) website does not display this information.
 
 ![pemilu2024.kpu.go.id.png](image/pemilu2024.kpu.go.id.png)
-
-## `secrets` and `real_count_pemilu2024` folder will publish at March 20, 2024
 
 ## how to check real count?
 
