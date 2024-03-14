@@ -1,5 +1,7 @@
 # this data from [KPU](https://pemilu2024.kpu.go.id/)
 
+[![wakatime](https://wakatime.com/badge/user/018b799e-de53-4f7a-bb65-edc2df9f26d8/project/018da7b7-99cb-467c-b130-86ce7afc934c.svg)](https://wakatime.com/badge/user/018b799e-de53-4f7a-bb65-edc2df9f26d8/project/018da7b7-99cb-467c-b130-86ce7afc934c)
+
 ## click [https://pemilu2024.kpu.go.id/](https://ridwaanhall.github.io/pemilu2024.kpu.go.id/) to see percentage of real count
 
 This website has been created by Ridwan Halim (ridwaanhall) to provide information regarding the vote results for Presidential and Vice-Presidential Candidates, as The General Election Commissions (KPU) website does not display this information.
