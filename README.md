@@ -4,8 +4,6 @@
 
 This website has been created by Ridwan Halim (ridwaanhall) to provide information regarding the vote results for Presidential and Vice-Presidential Candidates, as The General Election Commissions (KPU) website does not display this information.
 
-[![wakatime](https://wakatime.com/badge/user/018b799e-de53-4f7a-bb65-edc2df9f26d8/project/018e37b6-9795-424a-bf35-4b39e3c4ba59.svg)](https://wakatime.com/badge/user/018b799e-de53-4f7a-bb65-edc2df9f26d8/project/018e37b6-9795-424a-bf35-4b39e3c4ba59)
-
 ![pemilu2024.kpu.go.id.png](image/pemilu2024.kpu.go.id.png)
 
 ## how to check real count?
