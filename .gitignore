@@ -1,5 +1,6 @@
 __pycache__/
 secrets/*.py
-real_count_pemilu2024/
+real_count_pemilu2024/__init__.py
+real_count_pemilu2024/config.py
 secrets/data/pemilu/hhcw/ppwp/*.json
 secrets/data/wilayah/pemilu/ppwp/*.json
