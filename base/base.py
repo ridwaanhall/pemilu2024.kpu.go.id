@@ -23,7 +23,8 @@ class OptionHandler:
         self.urls = {
             "1": f"{Config.base_url}/pemilu/ppwp.json",
             "2": f"{Config.base_url}/wilayah/pemilu/ppwp/0.json",
-            "3": f"{Config.base_url}/pemilu/hhcw/ppwp.json"
+            "3": f"{Config.base_url}/pemilu/hhcw/ppwp.json",
+            "4": f"{Config.base_url}/pemilu/ds/ppwp.json"
         }
 
     def perform_option(self, option):
@@ -43,6 +44,8 @@ class OptionHandler:
             self.regional_statistics()
         elif option == "7":
             self.total_statistics()
+        elif option == "9":
+            self.election_disputes()
         else:
             print("Invalid option. Please choose 1, 2, 3, 4, 5, 6, or 7.")
 
@@ -110,6 +113,24 @@ class OptionHandler:
                             continue
                 else:
                     continue
+
+    def election_disputes(self):
+        disputes = DataFetcher.get_data(self.urls["4"])
+        
+        if disputes:
+            print(disputes)
+            # for dispute in disputes:
+            #     print(f"no_sk_kpu: {dispute['no_sk_kpu']}")
+            #     print(f"tgl_sk_kpu: {dispute['tgl_sk_kpu']}")
+            #     print(f"nama_prov: {dispute['nama_prov']}")
+            #     print(f"nama_kab: {dispute['nama_kab']}")
+            #     print(f"nama_kec: {dispute['nama_kec']}")
+            #     print(f"nama_kel: {dispute['nama_kel']}")
+            #     print(f"no_tps: {dispute['no_tps']}")
+            #     print(f"tipe_usl: {dispute['tipe_usl']}")
+        else:
+            print("Failed to fetch data from URL 4.")
+            
 
 class FormattedDate:
     def __init__(self, date_string):
